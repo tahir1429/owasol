@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHAT WE DO | OWASOL</title>
+    <title>OWASOL</title>
     <link rel="stylesheet" href="assets/bootstrap-5.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/default.css">
@@ -25,10 +25,10 @@
             <span class="navbar-text">
                 <ul class="navbar-nav me-auto m-0">
                     <li class="nav-item">
-                      <a class="nav-link" href="main.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="main.html">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="services.html">Services</a>
+                      <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blogs</a>
@@ -48,10 +48,12 @@
         </div>
     </nav>
 
-    <section class="page-wrapper">
-       <div class="container-fluid">
-            OK
-       </div>
+    <section class="homepage-wrapper">
+        <div class="homepage-heading py-4">
+            <h2>Welcome to <span class="fw-bold">OWASOL</span></h2>
+            <h4 class="fw-semi-bold">We Take Your Business Online</h4>
+            <p class="fw-light">We merge imagination and technology to help brands grow in an age of digital transformation by Taking Your Business Online</p>
+        </div>
     </section>
 
     <a class="explore-btn ps-2" href="about.php" data-tilt data-tilt-scale="1.2" data-tilt-glare="true" data-tilt-maxGlare=".5">
@@ -69,13 +71,26 @@
     <script src="js/particle.js"></script>
     <script>
         $(document).ready( function(){
-            $('.js-tilt').tilt({});
-            // Set page height
-            const navHeight = $('.navbar').outerHeight();
-            $('.page-wrapper').css({
-                'height': 'calc( 100vh - '+navHeight+'px)',
-                'top': navHeight+'px'
-            });
+            $('.js-tilt').tilt({
+                // glare: true,
+                // maxGlare: .5
+                // scale: 1.2,
+                // reset: false
+                // disableAxis : 'Y'
+                // speed: 0
+            })
+            // Options [TILT]
+            // ========================================
+            // maxTilt:        20,
+            // perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+            // easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+            // scale:          1,      // 2 = 200%, 1.5 = 150%, etc..
+            // speed:          300,    // Speed of the enter/exit transition.
+            // transition:     true,   // Set a transition on enter/exit.
+            // disableAxis:    null,   // What axis should be disabled. Can be X or Y.
+            // reset:          true,   // If the tilt effect has to be reset on exit.
+            // glare:          false,  // Enables glare effect
+            // maxGlare:       1       // From 0 - 1.
         });
     </script>
 </body>

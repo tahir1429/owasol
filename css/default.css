@@ -1,0 +1,150 @@
+:root{
+    --web-color : rgba(0,4,44,1);
+    --web-hover-color: rgba(0,7,101,1);
+    --web-rgba-10 : rgba(0,4,44,0.1);
+    --web-rgba-30 : rgba(0,4,44,0.3);
+    --web-rgba-50 : rgba(0,4,44,0.5);
+    --web-rgba-70 : rgba(0,4,44,0.7);
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --secondary: #6c757d;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --backgroundColor : linear-gradient(157deg, rgba(0,4,44,1) 36%, rgba(0,7,101,1) 100%);
+}
+html{ scroll-behavior: smooth; }
+
+/* @font-face {
+    font-family: QuestrialRegular;
+    src: url('fonts/Questrial/Questrial-Regular.ttf');
+} */
+
+body{ position: relative; color: white; min-height: 100vh; }
+
+/***********************************************************************
+    Particles.js container 
+************************************************************************/ 
+#particles-js{ 
+    position: fixed; 
+    top: 0px;
+    left: 0px;
+    width: 100%; 
+    height: 100vh; 
+    background-color: linear-gradient( to bottom right,#232741,#0f1012)!important;
+    /* background-color: var(--web-color);  */
+    background-image: var(--backgroundColor);
+    /* background-image: url("");  */
+    background-repeat: no-repeat; 
+    background-size: cover; background-position: 50% 50%;
+} 
+/***********************************************************************
+    Navbar
+************************************************************************/
+.navbar-brand img{
+    width: 200px;
+}
+
+.navbar .nav-item .nav-link{
+    color: white;
+    font-size: 18px;
+}  
+
+.navbar .nav-item .nav-link:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px white;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    margin-top: 5px;
+  }
+  .navbar .nav-item .nav-link.active:after,
+  .navbar .nav-item .nav-link:hover:after { transform: scaleX(1); }
+
+
+
+/***********************************************************************
+    Page Styling
+************************************************************************/
+.page-wrapper{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    color: white;
+    min-height: 50vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.homepage-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    transform: translate(0%, -50%);
+    max-width: 70%;
+}
+.homepage-wrapper h2{ font-size: 42px;}
+.homepage-wrapper h4{ font-size: 26px;}
+.homepage-wrapper p{ font-size: 24px;}
+
+/***************************************************************
+** Explore Button
+****************************************************************/
+.explore-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 800;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.explore-btn .text{ display: inline-block; }
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+}
